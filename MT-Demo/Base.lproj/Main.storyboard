@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MT_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-6M-Vao">
+                                <rect key="frame" x="67" y="49" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Ssd-wF-AQH"/>
+                                    <constraint firstAttribute="width" constant="240" id="pvW-tI-LFc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lQ-fZ-jHx">
+                                <rect key="frame" x="164" y="314" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="2aF-xw-fft"/>
+                                    <constraint firstAttribute="height" constant="30" id="Igq-ym-4bi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="downloadTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4AU-Ol-ItD"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-8w-C5e">
+                                <rect key="frame" x="169" y="362" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="cmw-zd-rPQ"/>
+                                    <constraint firstAttribute="height" constant="37" id="nMT-eO-TXX"/>
+                                </constraints>
+                                <color key="color" red="0.0078431372550000003" green="0.54901960780000003" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZMQ-8w-C5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kto-zf-cxR"/>
+                            <constraint firstItem="ZMQ-8w-C5e" firstAttribute="top" secondItem="1lQ-fZ-jHx" secondAttribute="bottom" constant="18" id="U5U-1G-OhG"/>
+                            <constraint firstItem="1lQ-fZ-jHx" firstAttribute="top" secondItem="deZ-6M-Vao" secondAttribute="bottom" constant="25" id="Xby-r8-dAY"/>
+                            <constraint firstItem="1lQ-fZ-jHx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xsc-He-hO4"/>
+                            <constraint firstItem="deZ-6M-Vao" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="b1v-yw-DuT"/>
+                            <constraint firstItem="deZ-6M-Vao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWn-Fu-qOW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="deZ-6M-Vao" id="smS-uH-Aef"/>
+                        <outlet property="indicator" destination="ZMQ-8w-C5e" id="w60-wT-Jsa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
